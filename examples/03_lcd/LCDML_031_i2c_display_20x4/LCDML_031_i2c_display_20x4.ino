@@ -107,7 +107,7 @@
     Serial.println(F(_LCDML_VERSION)); // only for examples
 
     // LCD Begin
-    lcd.init();
+    lcd.begin(_LCDML_DISP_cols, _LCDML_DISP_rows);
     lcd.backlight();
     //lcd.begin(_LCDML_DISP_cols,_LCDML_DISP_rows);  // some display types needs here the initialization
 
@@ -149,5 +149,5 @@
 // check some errors - do not change here anything
 // *********************************************************************
 # if(_LCDML_DISP_rows > _LCDML_DISP_cfg_max_rows)
-# error change value of _LCDML_DISP_cfg_max_rows in LCDMenuLib2.h
+  # error change value of _LCDML_DISP_cfg_max_rows in LCDMenuLib2.h
 # endif
